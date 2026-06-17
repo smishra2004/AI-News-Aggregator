@@ -28,6 +28,9 @@ class DigestAgent:
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = "gpt-4o-mini"
         self.system_prompt = PROMPT
+        
+        
+        
 
     def generate_digest(self, title: str, content: str, article_type: str) -> Optional[DigestOutput]:
         try:
